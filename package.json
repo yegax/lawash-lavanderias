@@ -1,0 +1,51 @@
+{
+  "name": "web portfolio",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.13.1"
+  },
+  "description": "In this assignment, you will be learning to use MongoDB and Mongoose while creating REST API endpoints using Express. Please read the PDF instructions on eClass to understand what is needed to complete the assignment.",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js -e js,hbs",
+    "start": "node src/app.js",
+    "mkdir": "mkdirp submission",
+    "copy-src": "copyfiles package.json src/* src/**/* views/* views/**/* submission",
+    "copy-data": "copyfiles data/**/* submission",
+    "prezip": "rimraf submission.zip",
+    "zip": "bestzip submission.zip submission/",
+    "clean": "rimraf submission submission.zip",
+    "preprepare-submission": "rimraf submission",
+    "prepare-submission": "run-s -n -c mkdir copy-src copy-data zip",
+    "tailwind:css": "postcss public/assets/tailwind.css -o public/assets/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "bestzip": "^2.2.0",
+    "copyfiles": "^2.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "fast-csv": "^4.3.6",
+    "hbs": "^4.2.0",
+    "mkdirp": "^1.0.4",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.2",
+    "npm-run-all": "^4.1.5",
+    "paginate": "^0.2.0",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "prismjs": "^1.29.0",
+    "pug": "^3.0.2",
+    "punycode": "^2.3.1",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

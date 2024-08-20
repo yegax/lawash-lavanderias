@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <% for (var i = 0; i < components.length; i++) { %>
+            <table id="<%= components[i].original_id %>" class="rounded-xl w-full text-sm text-left ml-4 mt-5 mb-2">
+                <tr class="font-semibold grid grid-cols-1 list-inside">
+                    <th class="content flex">
+                        <a class="font-semibold text-2xl my-auto ml-2 mb-2 whitespace-nowrap w-full"><%= components[i].name %> </a>
+                        <div class="flex mr-1 items-center text-gray-800">
+                            <div class="ml-3 px-1 text-sm font-semibold bg-orange-400 rounded-md whitespace-no-wrap"> <%= components[i].lang.c %> </div>
+                        </div>
+                    </th>
+
+                    <th>
+                        <!-- Appearance -->
+                        <ul class="grid grid-cols-1 gap-0 font-normal mb-2 ml-1">
+
+                            <li class="ml-6 text-lg mb-6 list-none">
+                                <p class="mt-1 text-md font-thin mr-12"><span class="font-semibold"><%= components[i].name %></span> <%= components[i].info.about %></p>
+                            </li>
+
+                            <!-- This will render the HTML content -->
+                             <div class="render-codebox">
+                                <div class="font-semibold text-2xl whitespace-nowrap "><%- components[i].info.desc %> </div>
+                             </div>
+
+                             <ul class="secondary-font  list-none text-cus ml-8 mt-6 mb-3 p-shadow">
+                                <li class="mb-4"> <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-translate  float-left mx-1 my-0.5 " viewBox="0 0 16 16">
+                                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                                       </svg> <b class="ml-1">Languages</b>
+                                    <ul class="list-disc mx-4">
+                                    </ul>
+                                    <p class="ml-10"><%= components[i].lang.a %></p>
+                                </li>
+                            
+                                <li class="mb-4"> <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-collection-fill float-left mx-1 my-0.5 " viewBox="0 0 16 16">
+                                    <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/>
+                                    <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"/>
+                                     </svg> <b class="ml-1">Libraries</b>
+                                    <ul class="list-disc mx-4">
+                                    </ul>
+                                    <p class="ml-10"><%= components[i].lang.b %></p>
+                                </li>
+                            
+                            </ul>
+                            <!-- CODE BOX -->
+
+                            <div class="content flex -mt-1">
+                                <div class="font-semibold text-xl  mt-7 mb-2 ml-4">Code</div>
+                            </div>
+
+                            <div class="relative code-box" id="code-box-<%= i %>">
+                                <pre id="code-content-<%= i %>" class="whitespace-pre-wrap code-content">
+                                    <code class="language-html">
+                                        <%= components[i].info.desc %>
+                                    </code>
+                                </pre>
+                                <button class="copy-button" onclick="copyToClipboard(<%= i %>)">Copy</button>
+                                <button class="toggle-button" onclick="toggleCode(<%= i %>)">Show Code</button>
+                            </div>
+
+                            <li class="ml-6 text-lg list-none">
+                                <p class="mt-1 text-md font-thin mr-12"><span class="font-semibold"><%= components[i].name %></span> <%= components[i].info.about %></p>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between px-10 mt-6 border-b select-none md:mt-4"></div>
+                    </th>
+                </tr>
+            </table>
+        <% } %>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script>
+function copyToClipboard(index) {
+    const codeContent = document.getElementById(`code-content-${index}`).innerText;
+    navigator.clipboard.writeText(codeContent).then(() => {
+        alert('Code copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+function toggleCode(index) {
+    const codeBox = document.getElementById(`code-box-${index}`);
+    codeBox.classList.toggle('minimized');
+    const button = document.querySelector(`#code-box-${index} .toggle-button`);
+    button.textContent = codeBox.classList.contains('minimized') ? 'Show Code' : 'Hide Code';
+}
+
+// Initialize all code-boxes to be minimized when the document is ready
+document.addEventListener('DOMContentLoaded', () => {
+    const codeBoxes = document.querySelectorAll('.code-box');
+    codeBoxes.forEach((codeBox, index) => {
+        codeBox.classList.add('minimized');
+        const button = codeBox.querySelector('.toggle-button');
+        if (button) {
+            button.textContent = 'Show Code'; // Ensure the button text reflects the minimized state
+        }
+    });
+});
+</script>
+
+
+                                    
+
+                          
+                      
