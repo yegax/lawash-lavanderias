@@ -1045,9 +1045,8 @@ body {
   background-size: cover; /* Ensure the image covers the whole container */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center top; /* Centers horizontally and aligns bottom */
-  width: 80%; /* Ensure the container takes up the full width */
+  width: 100%; /* Ensure the container takes up the full width */
 }
-
 
 .glass-nav-b{
   background-color: #22303C;
