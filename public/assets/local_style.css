@@ -597,24 +597,7 @@ h2 {
   transition: 0.8s;
   background-color: rgba(130, 130, 130, 0.193);
 }
-.glass-nav{
-  background-color: #192734;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(7px);
-  font-size: 18px;
-}
-.glass-nav-b{
-  background-color: #22303C;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(7px);
-  border: rgba(197, 147, 255, 0);
-}
 
-.glass-nav-a{
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(7px);
-}
 
 
 .glass-btns{
@@ -921,18 +904,18 @@ animation: bounces 2s ease infinite .6s, color-change 4.4s infinite;
 }
 
 .hover-grow:hover {
-  transform: scale(112%);
+  transform: scale(106%);
   animation-name: growin;
   animation-duration: 0.3s;
 }
 
 @keyframes growin {
   0%   {transform: scale(100%);}
-  100%   {transform: scale(112%);}
+  100%   {transform: scale(106%);}
 }
 
 @keyframes growout {
-  0%   {transform: scale(112%);}
+  0%   {transform: scale(106%);}
   100%   {transform: scale(100%);}
 }
 
@@ -1013,11 +996,11 @@ animation: bounces 2s ease infinite .6s, color-change 4.4s infinite;
 }
 
 body {
-  color: #ffffff; 
+  color: #000000; 
   /* 
   background: rgb(21, 21, 21) url('https://i.postimg.cc/p2Wjy2Tf/GRAINY-HUE-GRADIENT.png');
   BG IMAGE */
-  background-color: #15202B; 
+  background-color: #e4e5f1; 
    /*
      font-family: "PT Mono", monospace;
   background: rgb(21, 21, 21) url('https://i.postimg.cc/B6zdRtyM/image-2024-03-18-185814125.jpg') no-repeat center center fixed;
@@ -1034,9 +1017,53 @@ body {
 
   background-size: cover;
 }
+.color-lawash{
+  background-color: rgb(114, 179, 184);
+  color: #fafafa;
+}
+
+.glass-nav{
+  background: linear-gradient(to bottom, rgb(240, 242, 255) 0%, rgb(228, 229, 241) 70%, rgb(210, 211, 221) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  padding-bottom: 15px;
+  font-weight: 900;
+}
+
+.glass-nav-c {
+  background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  padding-bottom: 7px;
+  color: #fafafa;
+}
+
+
+.glass-nav-d {
+  background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
+  background-image: url('https://i.postimg.cc/52ybtd8w/image-2024-08-20-203004544.png');
+  background-size: cover; /* Ensure the image covers the whole container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center top; /* Centers horizontally and aligns bottom */
+  width: 80%; /* Ensure the container takes up the full width */
+}
+
+
+.glass-nav-b{
+  background-color: #22303C;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  border: rgba(197, 147, 255, 0);
+}
+
+.glass-nav-a{
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+}
 
 .secondary-font {
-  color: #8899A6;
+  color: #004070;
 }
 .secondary-fontb {
   background-color: #8899A6;
@@ -1048,8 +1075,9 @@ body {
   color: #22303C;
 }
 
+
 .border-b{
-  border-color: #22303C;
+  border-color: #d2d3db;
   border-style: solid;
   border-width: 1px;
 }
@@ -1209,3 +1237,18 @@ body {
   border-radius: 10px;
 }
 
+.logo-img{
+  width: 84%;
+  margin-top: 18px;
+  margin-left: -17px;
+}
+.footer-logo{
+  width: 84%;
+  margin-bottom: 10px;
+  margin-left: 16px;
+  background-color: #e4e5f1;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 12px;
+}
