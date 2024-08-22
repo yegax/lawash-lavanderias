@@ -1024,8 +1024,6 @@ body {
 
 .glass-nav{
   background: linear-gradient(to bottom, rgb(240, 242, 255) 0%, rgb(228, 229, 241) 70%, rgb(210, 211, 221) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(7px);
   padding-bottom: 15px;
   font-weight: 900;
 }
@@ -1041,7 +1039,7 @@ body {
 
 .glass-nav-d {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
-  background-image: url('https://i.postimg.cc/52ybtd8w/image-2024-08-20-203004544.png');
+
   background-size: cover; /* Ensure the image covers the whole container */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center top; /* Centers horizontally and aligns bottom */
@@ -1088,9 +1086,6 @@ body {
   background-color: rgba(125, 125, 125, 0);
   font-size: 27px;
   font-weight: lighter;
-  border-radius: 10px;
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px)
 }
   /* 
 .glass-bg{
