@@ -78,18 +78,19 @@
   }
 
   .submitform{
-    padding: 9px;
+    padding: 8px;
+    padding-bottom: 7px;
     font-size: 18px;
     display: block;
-    width: 100%;
+    width: 40%;
     font-weight: 400;
     resize: none;
-    background-color: #007bff;
+    background-color: rgb(114, 179, 184);
     border-radius: 9px;
     color: white;
   }
   .submitform:hover {
-    background-color: #0056b3;
+    background-color: rgb(91, 149, 153);
 
   }
    
@@ -1032,10 +1033,13 @@ body {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   color: #fafafa;
 }
 
+.tinted-image {
+  filter: brightness(90%) sepia(1) saturate(1.1) hue-rotate(124deg); /* Adjust these values to achieve the tint */
+}
 
 .glass-nav-d {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
