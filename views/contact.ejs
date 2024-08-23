@@ -1,11 +1,45 @@
 <%- include('head.ejs') %>
 
-<body oncontextmenu="return false";>
-<div>
-    <div class="overflow-x-hidden">
+<body oncontextmenu="return false;" class="relative overflow-x-hidden">
+    <!-- SVG Background -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="absolute top-0 left-0 w-full h-full">
+    <circle cx="95" cy="50" r="3" fill="#d2d3db" opacity="0.75" />       <!-- Partially off-screen -->
+    <circle cx="56" cy="86" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="65" cy="55" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="40" cy="20" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="75" cy="40" r="2" fill="#d2d3db" opacity="0.75" />
+    <circle cx="35" cy="80" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="15" cy="60" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="70" cy="70" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="35" cy="30" r="2" fill="#d2d3db" opacity="0.75" />
+    <circle cx="78" cy="55" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="70" cy="45" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="8" cy="47" r="5" fill="#d2d3db" opacity="0.75" />        <!-- Partially off-screen -->
+    <circle cx="72" cy="20" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="20" cy="89" r="3" fill="#d2d3db" opacity="0.75" />       <!-- Partially off-screen -->
+    <circle cx="55" cy="75" r="2" fill="#d2d3db" opacity="0.75" />
+    <circle cx="15" cy="30" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="25" cy="45" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="45" cy="35" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="60" cy="40" r="3" fill="#d2d3db" opacity="0.75" />
+    <circle cx="38" cy="65" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="28" cy="25" r="3" fill="#d2d3db" opacity="0.75" />
 
-    <!-- NAVBAR -->
-    <%- include('navbar.ejs') %> 
+    <circle cx="64" cy="24" r="4" fill="#d2d3db" opacity="0.75" />
+    <circle cx="84" cy="27" r="4" fill="#d2d3db" opacity="0.75" />
+    <!-- Enhanced circles in the bottom-left and bottom-right portions, moved higher -->
+    <circle cx="10" cy="75" r="6" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
+    <circle cx="20" cy="68" r="3" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
+    <circle cx="100" cy="66" r="4" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
+    <circle cx="86" cy="79" r="6" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
+</svg>
+
+      
+
+    <div>
+        <div class="relative z-10"> <!-- Ensure content is above the SVG -->
+            <!-- NAVBAR -->
+            <%- include('navbar.ejs') %> 
 
        <!--HEADER (Path)-->
        <div class="flex flex-col mt-20  md:flex-row md:justify-between">
@@ -25,17 +59,14 @@
             </div>
         </div>
 
-        <!--Main content // ABOUT-->
-          <div class="w-full glass-bg ">
-            <div class="p-3 pt-4">
+        <!-- Main content // ABOUT-->
+          <div class="w-full -mb-32 glass-bg ">
+            <div class="p-3 pt-16">
 
-              <div class="flex items-center justify-between border-b select-none mt-2">
-              </div>
               <div class="content flex -mt-1">
                   <div class="font-semibold text-4xl mt-1 ml-4"> Contact: </div>
               </div>
-              <div class="flex items-center justify-between border-b select-none mb-2">
-              </div>
+
                 
               <div class="mb-2">
                 <p class="text-sms mx-3 ml-32 mt-4 mr-32">

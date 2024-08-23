@@ -1051,7 +1051,7 @@ body {
 }
 
 .glass-nav-b{
-  background-color: #22303C;
+  background-color: #d2d3db;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(7px);
   border: rgba(197, 147, 255, 0);
