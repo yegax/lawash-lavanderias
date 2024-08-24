@@ -1063,6 +1063,12 @@ body {
   -webkit-backdrop-filter: blur(7px);
 }
 
+/* General grayscale effect for icons */
+.icon-gray {
+  opacity: 87%;
+}
+
+
 .secondary-font {
   color: #004070;
 }
@@ -1075,6 +1081,67 @@ body {
 .third-colorb {
   color: #22303C;
 }
+
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Hide images by default */
+.mySlides {
+  display: none;
+}
+
+/* Fading effect */
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+/* Next/Prev controls */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 23px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+
+
+
+
 
 
 .border-b{
