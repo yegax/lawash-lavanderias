@@ -1091,7 +1091,6 @@ body {
 .slideshow-container {
   position: relative;
   max-width: 100%;
-  margin: auto;
 }
 
 /* Hide images by default */

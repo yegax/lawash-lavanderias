@@ -48,29 +48,40 @@
             </div>
 
 <!-- Slideshow Container -->
-<div class="slideshow-container">
+<div class="slideshow-container mt-8">
     <!-- Slide 1 -->
     <div class="mySlides fade">
-      <img src="https://i.postimg.cc/PqGr0zN4/image-2024-08-24-010731970.png" style="width:100%">
-    </div>
-    <!-- Slide 2 -->
-    <div class="mySlides fade tinted-image">
         <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg">
+            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
                 <source src="/public/Untitled design.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-      </div>
+    </div>
+    <!-- Slide 2 https://i.postimg.cc/PqGr0zN4/image-2024-08-24-010731970.png-->
+    <div class="mySlides fade">
+        <div class="banner">
+            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
+                <source src="/public/Untitled Design (3).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
     <!-- Slide 3 -->
-    <div class="mySlides fade tinted-image">
-        <img src="https://i.postimg.cc/ZnkD4Xvv/image-2024-08-22-150511343.png" style="width:100%">
-      </div>
-    
+    <div class="mySlides fade">
+        <div class="banner">
+            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
+                <source src="/public/Untitled Design (2).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <!-- Next/Prev controls -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+</div>
+
   
 
 
@@ -252,6 +263,9 @@
                 <div class="w-1/2 md:w-full lg:w-1/2 sm:w-full mt-12 sm:mt-1 md:mt-12 lg:mt-12">
                     <img class="h-auto" src="https://i.postimg.cc/SQcbFS2r/image-2024-08-20-194018201-transformed.png" alt="Background Image">
                 </div>
+
+                
+
             </div>
         </div>
         
@@ -295,21 +309,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Función para avanzar al siguiente slide
+// Function to advance to the next slide
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Función para mostrar un slide específico
+// Function to show a specific slide
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-// Función para mostrar el slide actual
+// Function to show the current slide and control video playback
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -317,19 +330,29 @@ function showSlides(n) {
   if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    // Pause all videos in non-visible slides
+    let videos = slides[i].getElementsByTagName("video");
+    for (let j = 0; j < videos.length; j++) {
+      videos[j].pause();
+    }
   }
   slides[slideIndex - 1].style.display = "block";
+  // Reset and play videos in the visible slide
+  let visibleVideos = slides[slideIndex - 1].getElementsByTagName("video");
+  for (let j = 0; j < visibleVideos.length; j++) {
+    visibleVideos[j].currentTime = 0; // Reset video to the beginning
+    visibleVideos[j].play(); // Play the video
+  }
 }
 
-// Función para cambiar automáticamente el slide cada 7 segundos
+// Function to automatically change the slide every 14 seconds
 function autoSlide() {
   setInterval(function() {
     plusSlides(1);
-  }, 10000); // Cambia el slide cada 7000 milisegundos (7 segundos)
+  }, 13700); // Change slide every 14 seconds
 }
 
-// Llama a la función autoSlide para iniciar el cambio automático
+// Call the autoSlide function to start automatic slide change
 autoSlide();
-
 
 </script>
