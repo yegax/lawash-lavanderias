@@ -1104,7 +1104,7 @@ body {
 }
 
 @keyframes fade {
-  from { opacity: .4 }
+  from { opacity: .9 }
   to { opacity: 1 }
 }
 
