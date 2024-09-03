@@ -100,14 +100,25 @@ router.get('/heroes/:id', async (req, res) => {
 
 
 
-  // Route for about page.
-  router.get('/about', async (req, res) => {
-    res.render("index.ejs")
+  // Route for Nosotros.
+  router.get('/nosotros', async (req, res) => {
+    res.render("nosotros.ejs")
   })
 
-  // Route for contact page.
-  router.get('/contact', async (req, res) => {
-    res.render("contact.ejs")
+  
+  // Route for Sucursales.
+  router.get('/sucursales', async (req, res) => {
+    res.render("sucursales.ejs")
+  })
+
+    // Route for Servicios.
+    router.get('/servicios', async (req, res) => {
+      res.render("servicios.ejs")
+    })
+
+  // Route for Contacto.
+  router.get('/contacto', async (req, res) => {
+    res.render("contacto.ejs")
   })
 
 
