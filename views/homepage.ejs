@@ -89,48 +89,81 @@
 
 
 
+<div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 mb-4 sm:-mb-12 md:-mb-12 lg:mb-4">
+    <!-- MAIN CONTENT -->
+    <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
+        <!-- Main content // ABOUT -->
+        <div class="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-2 md:gap-2 mt-8  font-semibold">
 
-<div class="banner">
-    <img class="sm:hiddens md:hiddens lg:block block w-full h-full object-cover opacity-0" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Background Image">
+            <!-- Icon 1 -->
+            <div class="text-center mt-3">
+                <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/t4500nRW/image-2024-09-08-145347223.png">
+                <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mb-7 mx-auto icon-gray p-3 rounded-3xl transform rotate-6" src="https://i.postimg.cc/sXZQ3h8Q/image-2024-09-10-154000994.png">
+
+                <p class="text-sm lg:text-base md:text-xl ml-16 mr-16 mt-4 text-gray-600">En la caferetería puedes disfrutar de una amplia seleccion de alimentos y botanas disponibles a un gran precio.</p>
+
+            </div>
+            
+            <!-- Icon 2 -->
+            <div class="text-center mt-3"> 
+                <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/PxHpcZPY/image-2024-09-08-144120902.png">
+                <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mb-7 mx-auto icon-gray p-3 rounded-3xl transform -rotate-6" src="https://i.postimg.cc/kgD4vScV/image-2024-09-10-154852456.png">
+
+                <p class="text-sm lg:text-base md:text-xl ml-16 mr-16 mt-4 text-gray-600">En la caferetería puedes disfrutar de una amplia seleccion de alimentos y botanas disponibles a un gran precio.</p>
+
+                
+            </div>
+          
+            <!-- Icon 3 https://i.postimg.cc/rz6S6L94/image-2024-09-10-155403354.png https://i.postimg.cc/5y7MrwhC/image-2024-09-09-145351773.png  -->
+            <div class="text-center mt-3">
+                <img class="w-2/3 sm:w-3/6 md:w-3/6 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/j270Zz5X/image-2024-09-10-160025327.png">
+                <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mb-7 mx-auto icon-gray  p-3 rounded-3xl transform rotate-6" src="https://i.postimg.cc/FRqVg67Y/image-2024-09-10-160146839.png">
+
+                <p class="text-sm lg:text-base md:text-xl ml-16 mr-16 mt-4 text-gray-600">En la caferetería puedes disfrutar de una amplia seleccion de alimentos y botanas disponibles a un gran precio.</p>
+                
+            </div>
+            
+        </div>
+    
+        
+    </div>
 </div>
+
 
 <!-- Second Slideshow Container -->
-<div class="slideshow-container z-10">
-    <!-- Slide 1 -->
-    <div class="mySlides2 fade">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled design (2).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="mySlides2 fade">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled Design.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="mySlides2 fade">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled Design (3).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+<div class="relative">
+    <!-- Bottom Background Image -->
+    <img class="absolute inset-0 w-full h-full object-cover hidden lg:block" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Bottom Background Image" style="z-index: 0;">
 
-    <!-- Next/Prev controls for second slideshow -->
-    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+    <!-- Slideshow Container -->
+    <div class="sm:hidden md:hidden lg:block block slideshow-container z-10 -mb-24 relative">
+        <!-- Slide 1 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/mDXN4Sv3/image-2024-09-15-125944393.png" alt="Top Background Image">
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
+            </div>
+        </div>
+
+        <!-- Next/Prev controls for slideshow -->
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+    </div>
 </div>
 
 
-<div class="container pb-1 mx-auto mt-6">
+<div class="container pb-1 mx-auto">
   <!-- MAIN CONTENT-->
   <div class="md:flex">
     <!--Main content // ABOUT-->
@@ -188,15 +221,17 @@
   </div>
 </div>
 
-    
+    <!-- 
 <div>
-    <div class="relative mt-8 z-20 -mb-10">
-        <!-- Image Background -->
-        <img class="sm:hidden md:hidden lg:block block w-full h-full object-cover" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Background Image">
-    
-        <!-- Overlay Content -->
+    <div class="relative mt-8 z-20 -mb-40">
+      <div class="banner relative w-full h-screen">
+
+            <img class="absolute inset-0 w-full object-cover hidden lg:block" src="https://i.postimg.cc/mDXN4Sv3/image-2024-09-15-125944393.png" alt="Top Background Image" style="z-index: 2;">
+
+            <img class="absolute inset-0 w-full object-cover hidden lg:block" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Bottom Background Image" style="z-index: 1;">
+        </div>
         <div class="absolute inset-0 flex flex-col  justify-center items-center text-center text-white px-6">
-            <!--
+
 
 <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61565761010536" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61565761010536" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61565761010536">La Wash Lavanderías</a></blockquote></div>
 
@@ -207,13 +242,13 @@
             <p class="text-2xl mt-12">
                 In this collection, you will find navbars tailored for different needs and preferences. Whether you are building a sleek, minimalist site, a content-heavy platform, or a mobile-first application, there is a navbar design here to suit your requirements. Each design is coded with best practices in mind, including responsiveness, accessibility, and performance optimization.
             </p>
-            -->
+
         </div>
     </div>
 </div>
-  
+  -->
               
-        <div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 -mb-24 sm:-mb-12 md:-mb-12 lg:-mb-10">
+        <div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 mb-4 sm:-mb-12 md:-mb-12 lg:mb-4">
             <!-- MAIN CONTENT -->
             <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
                 <!-- Main content // ABOUT -->
