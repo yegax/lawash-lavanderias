@@ -1,6 +1,11 @@
 <%- include('head.ejs') %>
 
 <body oncontextmenu="return false;" class="relative overflow-x-hidden">
+
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="cZYg02cO"></script>
+
+
     <!-- SVG Background -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="absolute top-0 left-0 w-full h-full">
     <circle cx="95" cy="50" r="3" fill="#d2d3db" opacity="0.75" />       <!-- Partially off-screen -->
@@ -47,10 +52,10 @@
                 </div>
             </div>
 
-<!-- Slideshow Container -->
+<!-- First Slideshow Container -->
 <div class="slideshow-container mt-8">
     <!-- Slide 1 -->
-    <div class="mySlides fade">
+    <div class="mySlides1">
         <div class="banner">
             <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
                 <source src="/public/Untitled design.mp4" type="video/mp4">
@@ -58,8 +63,8 @@
             </video>
         </div>
     </div>
-    <!-- Slide 2 https://i.postimg.cc/PqGr0zN4/image-2024-08-24-010731970.png-->
-    <div class="mySlides fade">
+    <!-- Slide 2 -->
+    <div class="mySlides1">
         <div class="banner">
             <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
                 <source src="/public/Untitled Design (3).mp4" type="video/mp4">
@@ -68,7 +73,7 @@
         </div>
     </div>
     <!-- Slide 3 -->
-    <div class="mySlides fade">
+    <div class="mySlides1">
         <div class="banner">
             <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
                 <source src="/public/Untitled Design (2).mp4" type="video/mp4">
@@ -77,13 +82,10 @@
         </div>
     </div>
 
-    <!-- Next/Prev controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Next/Prev controls for first slideshow -->
+    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 </div>
-
-  
-
 
 
 
@@ -161,23 +163,35 @@
 </div>
 
     
-<div>
-    <div class="relative mt-8 mb-32">
-        <!-- Image Background -->
-        <img class="w-full h-full object-cover" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Background Image">
-    
-        <!-- Overlay Content -->
-        <div class="absolute inset-0 flex flex-col  justify-center items-center text-center text-white px-6">
-            <!--
-            <p class="font-semibold text-4xl mt-10">Tailwind CSS Navigation Bar Library</p>
-            <p class="text-2xl mt-4">
-                Explore a curated collection of navigation bar designs that blend functionality with visual appeal. Each design is meticulously crafted to enhance the user experience.
-            </p>
-            <p class="text-2xl mt-12">
-                In this collection, you will find navbars tailored for different needs and preferences. Whether you are building a sleek, minimalist site, a content-heavy platform, or a mobile-first application, there is a navbar design here to suit your requirements. Each design is coded with best practices in mind, including responsiveness, accessibility, and performance optimization.
-            </p>
-            -->
+<!-- Second Slideshow Container -->
+<div class="relative mt-10 mb-12">
+    <!-- Bottom Background Image -->
+    <img class="absolute inset-0 w-full h-full object-cover hidden lg:block" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Bottom Background Image" style="z-index: 0;">
+
+    <!-- Slideshow Container -->
+    <div class="sm:hidden md:hidden lg:block block slideshow-container z-10 -mb-24 relative">
+        <!-- Slide 1 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
+            </div>
         </div>
+        <!-- Slide 2 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/mDXN4Sv3/image-2024-09-15-125944393.png" alt="Top Background Image">
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="mySlides2 fade">
+            <div class="banner">
+                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
+            </div>
+        </div>
+
+        <!-- Next/Prev controls for slideshow -->
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
     </div>
 </div>
   
@@ -281,50 +295,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex1 = 1;
+let slideIndex2 = 1;
+
+showSlides(slideIndex1, 1); // Initialize first slideshow
+showSlides(slideIndex2, 2); // Initialize second slideshow
 
 // Function to advance to the next slide
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, slideshow) {
+  if (slideshow === 1) {
+    showSlides(slideIndex1 += n, 1);
+  } else if (slideshow === 2) {
+    showSlides(slideIndex2 += n, 2);
+  }
 }
 
 // Function to show a specific slide
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-// Function to show the current slide and control video playback
-function showSlides(n) {
+function showSlides(n, slideshow) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    // Pause all videos in non-visible slides
-    let videos = slides[i].getElementsByTagName("video");
-    for (let j = 0; j < videos.length; j++) {
-      videos[j].pause();
+  let slides;
+
+  if (slideshow === 1) {
+    slides = document.getElementsByClassName("mySlides1");
+    if (n > slides.length) { slideIndex1 = 1 }
+    if (n < 1) { slideIndex1 = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      // Pause videos in non-visible slides
+      let videos = slides[i].getElementsByTagName("video");
+      for (let j = 0; j < videos.length; j++) {
+        videos[j].pause();
+      }
+    }
+    slides[slideIndex1 - 1].style.display = "block";
+    // Play video in the visible slide
+    let visibleVideos = slides[slideIndex1 - 1].getElementsByTagName("video");
+    for (let j = 0; j < visibleVideos.length; j++) {
+      visibleVideos[j].currentTime = 0;
+      visibleVideos[j].play();
+    }
+  } else if (slideshow === 2) {
+    slides = document.getElementsByClassName("mySlides2");
+    if (n > slides.length) { slideIndex2 = 1 }
+    if (n < 1) { slideIndex2 = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      // Pause videos in non-visible slides
+      let videos = slides[i].getElementsByTagName("video");
+      for (let j = 0; j < videos.length; j++) {
+        videos[j].pause();
+      }
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+    // Play video in the visible slide
+    let visibleVideos = slides[slideIndex2 - 1].getElementsByTagName("video");
+    for (let j = 0; j < visibleVideos.length; j++) {
+      visibleVideos[j].currentTime = 0;
+      visibleVideos[j].play();
     }
   }
-  slides[slideIndex - 1].style.display = "block";
-  // Reset and play videos in the visible slide
-  let visibleVideos = slides[slideIndex - 1].getElementsByTagName("video");
-  for (let j = 0; j < visibleVideos.length; j++) {
-    visibleVideos[j].currentTime = 0; // Reset video to the beginning
-    visibleVideos[j].play(); // Play the video
-  }
 }
 
-// Function to automatically change the slide every 14 seconds
+// Automatic slide change for both slideshows
 function autoSlide() {
   setInterval(function() {
-    plusSlides(1);
-  }, 13700); // Change slide every 14 seconds
+    plusSlides(1, 1);
+    plusSlides(1, 2);
+  }, 13700); // Change slides every 14 seconds
 }
 
-// Call the autoSlide function to start automatic slide change
+// Start automatic slideshow
 autoSlide();
 
 </script>
