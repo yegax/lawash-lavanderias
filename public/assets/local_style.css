@@ -1029,6 +1029,12 @@ body {
   font-weight: 900;
 }
 
+.glass-nav-mobile{
+  background: linear-gradient(to bottom, rgb(240, 242, 255) 0%, rgb(228, 229, 241) 70%, rgb(210, 211, 221) 100%);
+  padding-bottom: 50px;
+  font-weight: 900;
+}
+
 .glass-nav-c {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
   backdrop-filter: blur(7px);
@@ -1310,6 +1316,12 @@ body {
   margin-top: 18px;
   margin-left: -17px;
 }
+.logo-img-mobile{
+  width: 120%;
+  margin-top: 50px;
+  margin-left: -9px;
+}
+
 .footer-logo{
   width: 84%;
   margin-bottom: 10px;
