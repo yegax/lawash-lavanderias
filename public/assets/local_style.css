@@ -1320,3 +1320,10 @@ body {
   padding-left: 10px;
   border-radius: 12px;
 }
+
+.mobile-navbar-hide {
+  display: none; /* Oculta el menú */
+}
+.mobile-navbar {
+  display: block; /* Muestra el menú */
+}
