@@ -1047,7 +1047,7 @@ body {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  padding-bottom: 60px;
+  padding-bottom: 35px;
   color: #fafafa;
 }
 
