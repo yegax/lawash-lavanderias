@@ -46,11 +46,13 @@
         <!-- NAVBAR -->
         <%- include('navbar.ejs') %> 
 
-        <!--HEADER (Path)-->
-        <div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
-            <div class="flex ml-3 mt-3 lg:mt-3 md:mt-9 sm:mt-9 items-center">
-            </div>
-        </div>
+            <!--HEADER (Path)-->
+            <div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
+              <div class="flex ml-3 mt-3 lg:mt-3 md:mt-24 sm:mt-24 items-center">
+                  <div class="mt-0 lg:mt-0 md:mt-2 sm:mt-2">
+                  </div>
+              </div>
+          </div>
 
 <!-- First Slideshow Container -->
 <div class="slideshow-container mt-8">
@@ -98,15 +100,15 @@
       <!--Main content // ABOUT-->
       <div class="w-full glass-bg">
         
-        <div class="p-3 pt-2">
+        <div class="p-3 pt-2 text-gray-700 font-normal">
   
               <div class="content flex -mt-1">
-                  <div class="font-semibold text-4xl mt-1 ml-4"> Contacto: </div>
+                  <div class="font-semibold text-4xl mt-1 ml-4 text-gray-700"> Contacto: </div>
               </div>
 
                 
               <div class="mb-2">
-                <p class="text-sms mx-3 ml-10 mt-4 mr-10">
+                <p class="text-xl mx-3 ml-10 mt-4 mr-10">
                   ¡Gracias por tu interés en ponerte en contacto con nosotros! Valoro tus comentarios, consultas y posibles colaboraciones. Para comunicarte con nosotros, por favor completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.
                 </p>
                 </div>
@@ -115,13 +117,13 @@
                   <input type="hidden" name="access_key" value="04401235-5250-464d-bf29-9d938d309924">
               
                   <p class="text-left mb-1">Nombre: </p>
-                  <input class="p-2 glass-nav-b rounded-md border-solid border-2 " type="text" name="email" placeholder="Name" required>
+                  <input class="p-2 glass-nav-b rounded-md border-solid border-2 " type="text" name="email" placeholder="Nombre" required>
 
                   <p class="text-left mt-2 mb-1">Dirección de Correo Electrónico                  </p>
-                  <input class="p-2 glass-nav-b rounded-md border-solid border-2 " type="email" name="email" placeholder="Email Address" required>
+                  <input class="p-2 glass-nav-b rounded-md border-solid border-2 " type="email" name="email" placeholder="Correo Electrónico" required>
 
                   <p class="text-left mt-2 mb-1"> Mensaje:</p>
-                  <textarea class="p-2 glass-nav-b pb-10 rounded-md border-solid border-2 resize-none" name="message" placeholder="Your Message..." required></textarea>
+                  <textarea class="p-2 glass-nav-b pb-10 rounded-md border-solid border-2 resize-none" name="message" placeholder="Tu Mensaje..." required></textarea>
                   <input type="hidden" name="redirect" value="https://web3forms.com/success">
                   <br>
                   <button class="submitform" type="submit">Enviar Formulario
@@ -132,13 +134,13 @@
                   </button>
               </form>
 
-              <div class="mb-2">
-                <p class="text-sms ml-10 mr-10 mx-3">
+              <div class="mb-2 text-xl">
+                <p class="ml-10 mr-10 mx-3">
                   Por favor, proporciona detalles de contacto precisos para que podamos responderte rápidamente. Agradecemos tu comprensión y te aseguramos que tu información se mantendrá confidencial.
                   <br>                   <br> 
                   No dudes en ponerte en contacto con nosotros para cualquier pregunta, queja, propuesta de servicio, o simplemente para saludarnos. Estamos aquí para asistirte y resolver cualquier inquietud que puedas tener. ¡Esperamos poder conectar contigo y ayudarte a resolver tus necesidades de lavandería!
                 </p>
-                <p class="text-sms float-right mr-8 mb-8 mt-2">
+                <p class="float-right mr-8 mb-8 mt-2">
                     <b>¡Gracias por visitarnos!
 
                     </b>
