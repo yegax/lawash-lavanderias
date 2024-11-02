@@ -1356,3 +1356,6 @@ body {
 .mobile-navbar {
   display: block; /* Muestra el menú */
 }
+.videoad-posfix{
+  margin-bottom: -140px;
+}
