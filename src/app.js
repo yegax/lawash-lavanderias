@@ -73,9 +73,7 @@ app.get('/', async (req, res) => {
 
 // 404 Page
 app.get('*', (req, res) => {
-  res.status(404).send({
-    "err": "not found!",
-  })
+  res.render("404.ejs")
 })
 
 app.use(function (err, req, res, next) {
