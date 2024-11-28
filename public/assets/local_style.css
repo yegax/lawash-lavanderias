@@ -1221,55 +1221,6 @@ body {
 
 
 
-.render-codebox{
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  background-color: #22303C; /* Dark background for the code box */
-  color: #f5f5f5; /* Light text color for better contrast */
-  border-radius: 8px;
-  padding: 1rem; /* Added padding for better appearance */
-  border: 1px solid #44444400; /* Slightly darker border for better visibility */
-  width: 850px;
-  height: 120px;
-  margin-left: 25px;
-}
-.code-box {
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  background-color: #22303C; /* Dark background for the code box */
-  color: #f5f5f5; /* Light text color for better contrast */
-  border-radius: 8px;
-  font-family: 'Fira Code', monospace;
-  font-size: 15px;
-  padding: 1rem; /* Added padding for better appearance */
-  overflow: auto;
-  border: 1px solid #44444400; /* Slightly darker border for better visibility */
-  max-height: 500px; /* Set a maximum height for the code box */
-  width: 850px;
-  margin-left: 30px;
-}
-
-/* Custom scrollbar styling for Webkit browsers (Chrome, Safari) */
-.code-box::-webkit-scrollbar {
-  width: 16px; /* Width of the scrollbar */
-}
-
-.code-box::-webkit-scrollbar-thumb {
-  background-color: #007bff; /* Color of the scrollbar thumb */
-  border-radius: 8px; /* Rounded corners for the scrollbar thumb */
-}
-
-.code-box::-webkit-scrollbar-thumb:hover {
-  background-color: #0056b3; /* Darker color on hover */
-}
-
-.code-box::-webkit-scrollbar-track {
-  background: #2c2c2c; /* Background color of the track */
-  border-radius: 8px; /* Rounded corners for the track */
-}
-
 /* Button styling */
 .copy-button, .minimize-button, .toggle-button {
   position: absolute;
