@@ -55,7 +55,7 @@
             </div>
 
 <!-- First Slideshow Container -->
-<div class="slideshow-container mt-8">
+<div class="slideshow-container block sm:hidden md:hidden lg:block mt-8">
     <!-- Slide 1 -->
     <div class="mySlides1">
         <div class="banner">
@@ -91,6 +91,35 @@
     
 </div>
 
+<!-- First Slideshow Container     MOBILE -->
+<div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-12 hidden sm:block md:block lg:hidden">
+  <!-- Slideshow Container -->
+  <div class=" slideshow-container z-10 -mb-24 relative">
+      <!-- Slide 1 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-1.jpg" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-1.jpg" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-1.jpg" alt="Top Background Image">
+          </div>
+      </div>
+
+      <!-- Next/Prev controls for slideshow -->
+      <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+  </div>
+</div>
+
 <div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 ">
     <!-- MAIN CONTENT -->
     <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
@@ -102,7 +131,7 @@
                 <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/cafeteria-lawash-logo.png">
                 <img class="w-5/6 mb-7 mx-auto icon-gray p-3 rounded-3xl transform rotate-6" src="/public/images/lawash-stock-1.jpg">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-4 text-gray-600 font-normal">En la <span class="font-semibold">Cafetería La Wash</span> puedes disfrutar de una amplia selección de alimentos y botanas.</p>
+                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal">En la <span class="font-semibold">Cafetería La Wash</span> puedes disfrutar de una amplia selección de alimentos y botanas.</p>
 
             </div>
             
@@ -111,7 +140,7 @@
                 <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/cinewash-lawash-logo.png">
                 <img class="w-5/6 mb-7 mx-auto icon-gray p-3 rounded-3xl transform -rotate-6" src="/public/images/lawash-stock-2.jpg">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-4 text-gray-600 font-normal">En <span class="font-semibold">Cine Wash</span>, los pequeños pueden disfrutar de películas mientras esperan.</p>
+                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal">En <span class="font-semibold">Cine Wash</span>, los pequeños pueden disfrutar de películas mientras esperan.</p>
 
                 
             </div>
@@ -121,7 +150,7 @@
                 <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/productos-lawash-logo.png">
                 <img class="w-5/6 mb-7 mx-auto icon-gray  p-3 rounded-3xl transform rotate-6" src="/public/images/lawash-stock-3.jpg">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-4 text-gray-600 font-normal">En la tienda de <span class="font-semibold">Productos La Wash</span> encontrarás productos de lavado, bebidas y dulces.</p>
+                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal">En la tienda de <span class="font-semibold">Productos La Wash</span> encontrarás productos de lavado, bebidas y dulces.</p>
                 
             </div>
         </div>
@@ -134,7 +163,7 @@
             <div class="text-center mt-3 hidden lg:hidden md:block sm:block">
                 <img class="w-5/6 mx-auto icon-gray" src="/public/images/productos-lawash-logo.png">
                 <img class="w-5/6 mb-7 mx-auto icon-gray p-3 rounded-3xl transform rotate-6" src="/public/images/lawash-stock-3.jpg">
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl  ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-4 text-gray-600 font-normal">En la tienda de <span class="font-semibold">Productos La Wash</span> encontrarás productos de lavado, bebidas y dulces.</p>
+                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl  ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal">En la tienda de <span class="font-semibold">Productos La Wash</span> encontrarás productos de lavado, bebidas y dulces.</p>
                 
             </div>
         </div>
@@ -404,9 +433,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let slideIndex1 = 1;
 let slideIndex2 = 1;
+let slideIndex3 = 1;
 
 showSlides(slideIndex1, 1); // Initialize first slideshow
 showSlides(slideIndex2, 2); // Initialize second slideshow
+showSlides(slideIndex3, 3); // Initialize third slideshow
 
 // Function to advance to the next slide
 function plusSlides(n, slideshow) {
@@ -414,6 +445,8 @@ function plusSlides(n, slideshow) {
     showSlides(slideIndex1 += n, 1);
   } else if (slideshow === 2) {
     showSlides(slideIndex2 += n, 2);
+  } else if (slideshow === 3) {
+    showSlides(slideIndex3 += n, 3);
   }
 }
 
@@ -424,18 +457,16 @@ function showSlides(n, slideshow) {
 
   if (slideshow === 1) {
     slides = document.getElementsByClassName("mySlides1");
-    if (n > slides.length) { slideIndex1 = 1 }
-    if (n < 1) { slideIndex1 = slides.length }
+    if (n > slides.length) { slideIndex1 = 1; }
+    if (n < 1) { slideIndex1 = slides.length; }
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-      // Pause videos in non-visible slides
       let videos = slides[i].getElementsByTagName("video");
       for (let j = 0; j < videos.length; j++) {
         videos[j].pause();
       }
     }
     slides[slideIndex1 - 1].style.display = "block";
-    // Play video in the visible slide
     let visibleVideos = slides[slideIndex1 - 1].getElementsByTagName("video");
     for (let j = 0; j < visibleVideos.length; j++) {
       visibleVideos[j].currentTime = 0;
@@ -443,19 +474,34 @@ function showSlides(n, slideshow) {
     }
   } else if (slideshow === 2) {
     slides = document.getElementsByClassName("mySlides2");
-    if (n > slides.length) { slideIndex2 = 1 }
-    if (n < 1) { slideIndex2 = slides.length }
+    if (n > slides.length) { slideIndex2 = 1; }
+    if (n < 1) { slideIndex2 = slides.length; }
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-      // Pause videos in non-visible slides
       let videos = slides[i].getElementsByTagName("video");
       for (let j = 0; j < videos.length; j++) {
         videos[j].pause();
       }
     }
     slides[slideIndex2 - 1].style.display = "block";
-    // Play video in the visible slide
     let visibleVideos = slides[slideIndex2 - 1].getElementsByTagName("video");
+    for (let j = 0; j < visibleVideos.length; j++) {
+      visibleVideos[j].currentTime = 0;
+      visibleVideos[j].play();
+    }
+  } else if (slideshow === 3) {
+    slides = document.getElementsByClassName("mySlides3");
+    if (n > slides.length) { slideIndex3 = 1; }
+    if (n < 1) { slideIndex3 = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      let videos = slides[i].getElementsByTagName("video");
+      for (let j = 0; j < videos.length; j++) {
+        videos[j].pause();
+      }
+    }
+    slides[slideIndex3 - 1].style.display = "block";
+    let visibleVideos = slides[slideIndex3 - 1].getElementsByTagName("video");
     for (let j = 0; j < visibleVideos.length; j++) {
       visibleVideos[j].currentTime = 0;
       visibleVideos[j].play();
@@ -463,11 +509,12 @@ function showSlides(n, slideshow) {
   }
 }
 
-// Automatic slide change for both slideshows
+// Automatic slide change for all slideshows
 function autoSlide() {
   setInterval(function() {
     plusSlides(1, 1);
     plusSlides(1, 2);
+    plusSlides(1, 3);
   }, 13700); // Change slides every 14 seconds
 }
 
