@@ -1329,8 +1329,8 @@ body {
   gap: 15px;
   opacity: 0;
   visibility: hidden;
-  animation: slideIn 1s forwards;
-  transition: opacity 1s, visibility 0s 1s, left 1s ease;
+  animation: slideIn 0.3s forwards;
+  transition: opacity 0.3s, visibility 0s 0.3s, left 0.3s ease;
 }
 
 /* For mobile navbar hidden */
