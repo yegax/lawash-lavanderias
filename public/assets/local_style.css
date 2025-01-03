@@ -1314,6 +1314,52 @@ body {
   border-radius: 12px;
 }
 
+.sidebar {
+  background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 40%, rgb(91, 141, 144) 100%);
+  padding: 100px;
+  z-index: 30;
+  color: #ffffff;
+  width: 500px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  animation: slideIn 1s forwards;
+  transition: opacity 1s, visibility 0s 1s, left 1s ease;
+}
+
+/* For mobile navbar hidden */
+.mobile-navbar-hide {
+  visibility: hidden;
+  opacity: 0;
+  left: -250px;
+}
+
+/* Keyframe for sliding in from left */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    left: -250px;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+  }
+}
+
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff;
+  font-size:50px;
+}
+
 .mobile-navbar-hide {
   display: none; /* Oculta el menú */
 }

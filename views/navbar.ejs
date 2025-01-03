@@ -191,13 +191,13 @@
       </div>
     </div>
 
-    <div class="flex mt-32 text-gray-800 items-center font-semibold ml-auto mr-24 sm:mr-0 md:mr-0 md:flex text-lg md:text-lg sm:text-sm">
+    <div class="flex mt-32 text-gray-800 items-center font-semibold ml-auto mr-24 sm:mr-0 md:mr-0 md:flex text-4xl">
 
-      <div id="menu-dropbar" class=" mr-6 mobile-navbar-hide">
+      <div id="menu-dropbar" class="mr-6 mobile-navbar-hide sidebar">
         <a href="/">INICIO</a>
-        <a href="/servicios" class="ml">SERVICIOS</a>
-        <a href="/sucursales" class="ml-0">SUCURSALES</a>
-        <a href="/contacto" class="ml-0">CONTACTO</a>
+        <a href="/servicios" class="ml-0 mt-5 text-4xl">SERVICIOS</a>
+        <a href="/sucursales" class="ml-0 mt-5">SUCURSALES</a>
+        <a href="/contacto" class="ml-0 mt-5">CONTACTO</a>
       </div>
 
       <div class="flex -mr-2">
@@ -220,9 +220,25 @@
 
   
 <script>
-  $(document).ready(function() {
-      $('#menu-btn').click(function() {
-          $('#menu-dropbar').toggleClass('mobile-navbar-hide'); // Mostrar/ocultar todos los menús
-      });
+$(document).ready(function() {
+  // Toggle menu on button click
+  $('#menu-btn').click(function(e) {
+    e.stopPropagation(); // Prevent the click event from bubbling up to document
+    $('#menu-dropbar').toggleClass('mobile-navbar-hide'); // Toggle visibility of the sidebar
   });
+
+  // Close the menu if you click outside of it
+  $(document).click(function(e) {
+    if (!$(e.target).closest('#menu-dropbar').length && !$(e.target).closest('#menu-btn').length) {
+      $('#menu-dropbar').addClass('mobile-navbar-hide'); // Close the menu
+    }
+  });
+
+  // Prevent the sidebar from closing when clicked inside it
+  $('#menu-dropbar').click(function(e) {
+    e.stopPropagation(); // Prevent event from bubbling up to the document
+  });
+});
+
+  
 </script>

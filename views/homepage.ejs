@@ -403,33 +403,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 <script>
-function copyToClipboard(index) {
-    const codeContent = document.getElementById(`code-content-${index}`).innerText;
-    navigator.clipboard.writeText(codeContent).then(() => {
-        alert('Code copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
-}
 
-function toggleCode(index) {
-    const codeBox = document.getElementById(`code-box-${index}`);
-    codeBox.classList.toggle('minimized');
-    const button = document.querySelector(`#code-box-${index} .toggle-button`);
-    button.textContent = codeBox.classList.contains('minimized') ? 'Show Code' : 'Hide Code';
-}
-
-// Initialize all code-boxes to be minimized when the document is ready
-document.addEventListener('DOMContentLoaded', () => {
-    const codeBoxes = document.querySelectorAll('.code-box');
-    codeBoxes.forEach((codeBox, index) => {
-        codeBox.classList.add('minimized');
-        const button = codeBox.querySelector('.toggle-button');
-        if (button) {
-            button.textContent = 'Show Code'; // Ensure the button text reflects the minimized state
-        }
-    });
-});
 
 
 let slideIndex1 = 1;
