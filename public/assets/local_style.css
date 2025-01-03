@@ -1116,21 +1116,10 @@ body {
   max-width: 100%;
 }
 
-/* Hide images by default */
+/* Add this to your CSS */
 .mySlides {
-  display: none;
+  display: none; /* Initially hide all slides */
 }
-
-/* Fading effect */
-.fade {
-  animation: fade 1.5s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: .0 }
-  to { opacity: 1 }
-}
-
 
 /* Next/Prev controls */
 .prev, .next {
@@ -1368,4 +1357,11 @@ body {
 }
 .videoad-posfix{
   margin-bottom: -150px;
+}
+/* Invisible block below the image */
+.invisible-block {
+  display: block;
+  height: 100%; /* Match the height of the image */
+  width: 100%; /* Match the width of the image */
+  background: transparent; /* Make it invisible */
 }
