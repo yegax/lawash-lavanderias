@@ -1365,11 +1365,11 @@ body {
 }
 
 .blue-tint {
-  filter: brightness(0.8) sepia(1) saturate(60%) hue-rotate(125deg);
+  filter: brightness(0.8)  saturate(60%) hue-rotate(20deg);
   opacity: 1; /* Optional: Adjust transparency */
 }
 
-.blue-tinta {
+.blue-tint-a {
   filter: brightness(0.8) sepia(1) saturate(100%) hue-rotate(125deg);
   opacity: 1; /* Optional: Adjust transparency */
 }
