@@ -1365,6 +1365,16 @@ body {
 }
 
 .blue-tint {
+  filter: brightness(0.8) sepia(1) saturate(60%) hue-rotate(125deg);
+  opacity: 1; /* Optional: Adjust transparency */
+}
+
+.blue-tinta {
   filter: brightness(0.8) sepia(1) saturate(100%) hue-rotate(125deg);
+  opacity: 1; /* Optional: Adjust transparency */
+}
+
+.blue-tintb {
+  filter: brightness(3) sepia(1) saturate(100%) hue-rotate(125deg);
   opacity: 1; /* Optional: Adjust transparency */
 }
