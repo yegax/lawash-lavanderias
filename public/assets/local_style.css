@@ -1110,11 +1110,7 @@ body {
 
 
 
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-}
+
 
 /* Add this to your CSS */
 .mySlides {
@@ -1358,10 +1354,13 @@ body {
 .videoad-posfix{
   margin-bottom: -150px;
 }
-/* Invisible block below the image */
-.invisible-block {
-  display: block;
-  height: 100%; /* Match the height of the image */
-  width: 100%; /* Match the width of the image */
-  background: transparent; /* Make it invisible */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
 }
+
+
+.mySlides3 {
+  margin-top: -1025px;
+}
+
