@@ -121,5 +121,10 @@ router.get('/heroes/:id', async (req, res) => {
     res.render("contacto.ejs")
   })
 
+  // Maintenance Page
+router.get('/mantenimiento', async (req, res) => {
+  res.render("mantenimiento.ejs")
+})
+
 
 module.exports = router

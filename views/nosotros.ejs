@@ -42,50 +42,92 @@
       
 
     <div>
-        <div class="relative z-10"> <!-- Ensure content is above the SVG -->
-            <!-- NAVBAR -->
-            <%- include('navbar.ejs') %> 
-    
+      <div class="relative z-10"> <!-- Ensure content is above the SVG -->
+        <!-- NAVBAR -->
+        <%- include('navbar.ejs') %> 
+
             <!--HEADER (Path)-->
-            <div class="flex flex-col mt-20 md:flex-row md:justify-between">
-                <div class="flex ml-3 mt-3 items-center">
-                </div>
-            </div>
+            <div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
+              <div class="flex ml-3 mt-3 lg:mt-3 md:mt-24 sm:mt-24 items-center">
+                  <div class="mt-0 lg:mt-0 md:mt-2 sm:mt-2">
+                  </div>
+              </div>
+          </div>
 
 <!-- First Slideshow Container -->
-<div class="slideshow-container mt-8">
-    <!-- Slide 1 -->
-    <div class="mySlides1">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled design.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="mySlides1">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled Design (3).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="mySlides1">
-        <div class="banner">
-            <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
-                <source src="/public/Untitled Design (2).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+<div class="slideshow-container block sm:hidden md:hidden lg:block mt-8">
+  <!-- Slide 1 -->
+  <div class="mySlides1">
+      <div class="banner">
+          <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
+              <source src="/public/Untitled design.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </div>
+  <!-- Slide 2 -->
+  <div class="mySlides1">
+      <div class="banner">
+          <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
+              <source src="/public/Untitled Design (3).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </div>
+  <!-- Slide 3 -->
+  <div class="mySlides1">
+      <div class="banner">
+          <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
+              <source src="/public/Untitled Design (2).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </div>
 
-    <!-- Next/Prev controls for first slideshow -->
-    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  <!-- Next/Prev controls for first slideshow 
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+-->
+  
 </div>
+
+<!-- First Slideshow Container     MOBILE -->
+<div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-20 hidden sm:block md:block lg:hidden">
+  
+  <div class="banner">
+    <img class="inset-0 w-full h-full opacity-0" src="/public/images/banner-mobile-3.jpg" alt="Top Background Image">
+  </div>
+
+  <!-- Slideshow Container -->
+  <div class=" slideshow-container z-10 -mb-24 relative">
+      <!-- Slide 1 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-1.jpg" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-2.jpg" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="mySlides3 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-3.jpg" alt="Top Background Image">
+          </div>
+      </div>
+
+      <!-- Next/Prev controls for slideshow
+      <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+       -->
+  </div>
+</div>
+
+  
+
 
 
 
@@ -94,148 +136,135 @@
     <div class="md:flex">
       <!--Main content // ABOUT-->
       <div class="w-full glass-bg">
-        <div class="p-3 pt-2">
-  
-          <div class="content flex -mt-1">
-              <div class="font-semibold text-4xl mt-1 ml-4"> Servicios: </div>
-          </div>
-  
-      <!--    
-          <div class="content -mt-1">
-            <p class="font-semibold text-4xl mt-1 ml-4 text-center">La Wash Lavanderías</p>
-          </div>
-      -->
-  
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-2 md:gap-2 mt-8  font-semibold">
-  
-          <!-- Icon 1 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/fbHqhfxp/image-2024-08-23-171314776.png">
-              <p class="text-lg md:text-2xl lg:text-lg mt-2">Lavado Autoservicio</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 text-gray-600">Lavadoras comerciales de <span class="font-bold">10kg</span> y <span class="font-bold">20kg</span> que garantizan una limpieza profunda en un tiempo óptimo.</p>
-          </div>
-          
-          <!-- Icon 2 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/g2s6MSp9/image-2024-08-23-170950739.png">
-              <p class="text-lg md:text-2xl lg:text-lg  mt-2">Secado Autoservicio</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 mt-1 text-gray-600">Secadoras comerciales de <span class="font-bold">15kg</span> que garantizan un secado completo con rapidez y cuidado para cada prenda.</p>
-          </div>
         
-          <!-- Icon 3 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/RVFhTcdh/image-2024-08-23-174632939.png">
-              <p class="text-lg md:text-2xl lg:text-lg mt-2">Lavado por Encargo</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 mt-1 text-gray-600">Lavado, secado y doblado con detergentes y suavizantes de alta calidad. También contamos con tintorería.</p>
-          </div>
-        
-          <!-- Icon 4 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/66GcHvQW/image-2024-08-23-175528954.png">
-              <p class="text-lg md:text-2xl lg:text-lg mt-2">Café y Té Gratis</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 mt-1 text-gray-600">Ofrecemos café y té gratuitos mientras esperas. Además, tenemos una gran selección de botanas a la venta.</p>
-          </div>
-        
-          <!-- Icon 5 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/RhbKQtsH/image-2024-08-23-183626792.png">
-              <p class="text-lg md:text-2xl lg:text-lg mt-2">Productos de Lavado</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 mt-1 text-gray-600">En venta productos de lavado y cuidado de ropa de las marcas La Wash, Suavitel, Downy, Ariel, Ace, Clorox, etc. </p>
-          </div>
-        
-          <!-- Icon 6 -->
-          <div class="text-center">
-              <img class="w-2/3 sm:w-2/3 md:w-2/3 lg:w-2/3 mx-auto icon-gray" src="https://i.postimg.cc/RV2P2vHw/image-2024-08-23-200130002.png">
-              <p class="text-lg md:text-2xl lg:text-lg mt-2">Puntos y Premios</p>
-              <p class="text-sm lg:text-base md:text-xl mt-1 m-2 mt-1 text-gray-600">Con tu Tarjeta La Wash acumula puntos que puedes canjear por premios o por lavado y secado gratis.</p>
-          </div>
-          
-      </div>
-      
-      
+        <div class="p-3 pt-2 text-gray-700 font-normal">
   
-      
+              <div class="content flex mt-1">
+                  <div class="font-semibold text-4xl mt-1 ml-4 text-gray-700"> Nosotros: </div>
+              </div>
+
+                
+              <div class="mb-2">
+                <p class="text-xl lg:text-xl md:text-4xl sm:text-4xl mx-3 mt-4 ml-10 mr-10 lg:ml-10 lg:mr-10 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0">
+
+En La Wash Lavanderías, creemos que lavar tu ropa no tiene que ser una tarea tediosa. Por eso creamos un espacio moderno, limpio y cómodo donde no solo puedes realizar tu lavado, sino también disfrutar de tu tiempo mientras esperas. Nuestro enfoque es simple: combinar tecnología, buen servicio y una experiencia amigable para nuestros clientes.
+
+               </div>
+
+                
         
-  
-        </div>
-      </div>
-    </div>
+
+              <div class="mb-2 text-xl lg:text-xl md:text-4xl sm:text-4xl">
+                <p class="ml-10 mr-10 lg:ml-10 lg:mr-10 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mx-3 mt-3">
+                  Ofrecemos opciones para todos: desde autoservicio con equipos eficientes y fáciles de usar, hasta servicios por encargo para quienes prefieren dejar su ropa en manos expertas. Pero no nos detenemos ahí. Pensamos en toda la familia, por eso contamos con nuestra cafetería SnackWash, ideal para disfrutar de una bebida o botana mientras se lava la ropa, y CineWash, un pequeño cine donde los más pequeños pueden entretenerse viendo películas.
+                </p>
+                
+                <p class="ml-10 mr-10 lg:ml-10 lg:mr-10 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mx-3 mt-3">
+                Además, en nuestra tienda de productos encontrarás artículos para el cuidado de tu ropa, bebidas y dulces, todo dentro del mismo lugar. También ofrecemos servicios especializados para restaurantes, hoteles y negocios, a través de nuestro servicio de Lavado Empresarial, con entregas puntuales y procesos de higiene profesional.
+                 </p>
+                <p class="ml-10 mr-10 lg:ml-10 lg:mr-10 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mx-3 mt-3">
+                En La Wash, no solo cuidamos tus prendas, también cuidamos tu tiempo y comodidad. Nuestra misión es convertir una rutina en una experiencia agradable. Estamos aquí para ayudarte a hacer más con tu día.         </p>
+                  </p>
+                <p class="float-right mr-8 mb-8 mt-2">
+                    <b>¡Gracias por visitarnos!
+
+                    </b>
+                </p>
+                </div>
+
+              </div>
+          </div>
   </div>
-
-
-<!-- Second Slideshow Container -->
-<div class="relative mt-10 mb-12">
-    <!-- Bottom Background Image -->
-    <img class="absolute inset-0 w-full h-full object-cover hidden lg:block" src="https://i.postimg.cc/4fr1fGt9/image-2024-08-29-192655374.png" alt="Bottom Background Image" style="z-index: 0;">
-
-    <!-- Slideshow Container -->
-    <div class="sm:hidden md:hidden lg:block block slideshow-container z-10 -mb-24 relative">
-        <!-- Slide 1 -->
-        <div class="mySlides2 fade">
-            <div class="banner">
-                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
-            </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="mySlides2 fade">
-            <div class="banner">
-                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/mDXN4Sv3/image-2024-09-15-125944393.png" alt="Top Background Image">
-            </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="mySlides2 fade">
-            <div class="banner">
-                <img class="inset-0 w-full h-full" src="https://i.postimg.cc/nc16hQGP/image-2024-09-15-165350636.png" alt="Top Background Image">
-            </div>
-        </div>
-
-        <!-- Next/Prev controls for slideshow -->
-        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-    </div>
 </div>
 
 
+  <!-- Second Slideshow Container     MOBILE -->
+  <div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-12 hidden sm:block md:block lg:hidden">
+    <div class="banner">
+      <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-4.jpg" alt="Top Background Image">
+    </div>
+  </div>
+
+    
+<!-- Second Slideshow Container -->
+<div class="relative mt-10 mb-12 block lg:block md:hidden sm:hidden">
+  <!-- Bottom Background Image -->
+  <img class="absolute inset-0 w-full h-full object-cover" src="/public/images/lawash-banner-base.png" alt="Bottom Background Image" style="z-index: 0;">
+
+  <!-- Slideshow Container -->
+  <div class=" slideshow-container z-10 -mb-24 relative">
+      <!-- Slide 1 -->
+      <div class="mySlides2 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/lawash-banner-1.png" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="mySlides2 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/lawash-banner-2.png" alt="Top Background Image">
+          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="mySlides2 fade">
+          <div class="banner">
+              <img class="inset-0 w-full h-full" src="/public/images/lawash-banner-3.png" alt="Top Background Image">
+          </div>
+      </div>
+
+      <!-- Next/Prev controls for slideshow -->
+      <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+  </div>
+</div>
+
+
+<div class="container pb-1 mx-auto">
+  <!-- MAIN CONTENT-->
+  <div class="md:flex">
+    <!--Main content // ABOUT-->
+    <div class="w-full glass-bg">
+      <div class="p-3 pt-2">
+        
+
+    
+
+    
+      
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
               
-  <div class="container mx-auto">
+  <div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 ">
     <!-- MAIN CONTENT -->
-    <div class="md:flex md:flex-col-reverse lg:flex-row items-center justify-center mt-12">
+    <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
         <!-- Main content // ABOUT -->
-        <div class="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-0  sm:gap-0 md:gap-0 mt-8 font-semibold justify-center">
+        <div class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-2 md:gap-2 mt-8  font-semibold">
+
+            
 
             <!-- Icon 1 -->
-            <div class="text-center">
-                <img class="w-full sm:w-2/3 md:w-full lg:w-w-full mx-auto icon-gray transform rounded-tl-3xl" src="https://i.postimg.cc/ZYv2T27P/image-2024-09-19-172652733.png">
-            </div>
+            <div class="text-center mt-3">
+                <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61565761010536" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61565761010536" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61565761010536">La Wash Lavanderías</a></blockquote></div>
 
-            <!-- Icon 2 -->
-            <div class="text-center">
-                <img class="w-full sm:w-2/3 md:w-full lg:w-w-full  mx-auto icon-gray transform rounded-none lg:rounded-none md:rounded-tr-3xl" src="https://i.postimg.cc/13yNRxHf/image-2024-09-19-173237276.png">
             </div>
+            
+          
+            <!-- Icon 3  -->
+            <div class="text-center mx-auto mt-32">
+                    <p class="font-semibold text-4xl mt-1 ml-4"> ¡Conéctate con nosotros! </p>
+                    <p class="font-semibold text-2xl mt-10 ml-4"> Sigue nuestras últimas novedades, promociones exclusivas y más. </p>
+                    <p class="font-semibold text-3xl mt-10 ml-4"> No te pierdas ninguna actualización. </p>
 
-            <!-- Icon 3 -->
-            <div class="text-center">
-                <img class="w-full sm:w-2/3 md:w-full lg:w-w-full  mx-auto icon-gray transform rounded-tr-3xl lg:rounded-tr-3xl sm:rounded-none md:rounded-none " src="https://i.postimg.cc/sxFrjr58/image-2024-09-19-172948818.png">
             </div>
-
-            <!-- Icon 4 -->
-            <div class="text-center">
-                <img class="w-full sm:w-2/3 md:w-full lg:w-w-full  mx-auto icon-gray transform rounded-bl-3xl lg:rounded-bl-3xl md:rounded-none sm:rounded-none " src="https://i.postimg.cc/bv08RRFM/image-2024-09-19-180353422.png">
-            </div>
-
-            <!-- Icon 5 -->
-            <div class="text-center">
-                <img class="w-full sm:w-2/3 md:w-full lg:w-w-full  mx-auto icon-gray transform rounded-none lg:rounded-none md:rounded-bl-3xl sm:rounded-bl-3xl" src="https://i.postimg.cc/v8kryHDh/image-2024-09-19-180015292.png">
-            </div>
-
-            <!-- Icon 6 -->
-            <div class="text-center">
-                <img class="ww-full sm:w-2/3 md:w-full lg:w-w-full  mx-auto icon-gray transform rounded-br-3xl" src="https://i.postimg.cc/Ghqk6hFX/image-2024-09-19-172811189.png">
-            </div>
-
+            
         </div>
+    
+        
     </div>
 </div>
 
@@ -253,105 +282,98 @@
 
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 <script>
-function copyToClipboard(index) {
-    const codeContent = document.getElementById(`code-content-${index}`).innerText;
-    navigator.clipboard.writeText(codeContent).then(() => {
-        alert('Code copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
-}
 
-function toggleCode(index) {
-    const codeBox = document.getElementById(`code-box-${index}`);
-    codeBox.classList.toggle('minimized');
-    const button = document.querySelector(`#code-box-${index} .toggle-button`);
-    button.textContent = codeBox.classList.contains('minimized') ? 'Show Code' : 'Hide Code';
-}
 
-// Initialize all code-boxes to be minimized when the document is ready
-document.addEventListener('DOMContentLoaded', () => {
-    const codeBoxes = document.querySelectorAll('.code-box');
-    codeBoxes.forEach((codeBox, index) => {
-        codeBox.classList.add('minimized');
-        const button = codeBox.querySelector('.toggle-button');
-        if (button) {
-            button.textContent = 'Show Code'; // Ensure the button text reflects the minimized state
+
+  let slideIndex1 = 1;
+  let slideIndex2 = 1;
+  let slideIndex3 = 1;
+  
+  showSlides(slideIndex1, 1); // Initialize first slideshow
+  showSlides(slideIndex2, 2); // Initialize second slideshow
+  showSlides(slideIndex3, 3); // Initialize third slideshow
+  
+  // Function to advance to the next slide
+  function plusSlides(n, slideshow) {
+    if (slideshow === 1) {
+      showSlides(slideIndex1 += n, 1);
+    } else if (slideshow === 2) {
+      showSlides(slideIndex2 += n, 2);
+    } else if (slideshow === 3) {
+      showSlides(slideIndex3 += n, 3);
+    }
+  }
+  
+  // Function to show a specific slide
+  function showSlides(n, slideshow) {
+    let i;
+    let slides;
+  
+    if (slideshow === 1) {
+      slides = document.getElementsByClassName("mySlides1");
+      if (n > slides.length) { slideIndex1 = 1; }
+      if (n < 1) { slideIndex1 = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        let videos = slides[i].getElementsByTagName("video");
+        for (let j = 0; j < videos.length; j++) {
+          videos[j].pause();
         }
-    });
-});
-
-
-let slideIndex1 = 1;
-let slideIndex2 = 1;
-
-showSlides(slideIndex1, 1); // Initialize first slideshow
-showSlides(slideIndex2, 2); // Initialize second slideshow
-
-// Function to advance to the next slide
-function plusSlides(n, slideshow) {
-  if (slideshow === 1) {
-    showSlides(slideIndex1 += n, 1);
-  } else if (slideshow === 2) {
-    showSlides(slideIndex2 += n, 2);
-  }
-}
-
-// Function to show a specific slide
-function showSlides(n, slideshow) {
-  let i;
-  let slides;
-
-  if (slideshow === 1) {
-    slides = document.getElementsByClassName("mySlides1");
-    if (n > slides.length) { slideIndex1 = 1 }
-    if (n < 1) { slideIndex1 = slides.length }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      // Pause videos in non-visible slides
-      let videos = slides[i].getElementsByTagName("video");
-      for (let j = 0; j < videos.length; j++) {
-        videos[j].pause();
+      }
+      slides[slideIndex1 - 1].style.display = "block";
+      let visibleVideos = slides[slideIndex1 - 1].getElementsByTagName("video");
+      for (let j = 0; j < visibleVideos.length; j++) {
+        visibleVideos[j].currentTime = 0;
+        visibleVideos[j].play();
+      }
+    } else if (slideshow === 2) {
+      slides = document.getElementsByClassName("mySlides2");
+      if (n > slides.length) { slideIndex2 = 1; }
+      if (n < 1) { slideIndex2 = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        let videos = slides[i].getElementsByTagName("video");
+        for (let j = 0; j < videos.length; j++) {
+          videos[j].pause();
+        }
+      }
+      slides[slideIndex2 - 1].style.display = "block";
+      let visibleVideos = slides[slideIndex2 - 1].getElementsByTagName("video");
+      for (let j = 0; j < visibleVideos.length; j++) {
+        visibleVideos[j].currentTime = 0;
+        visibleVideos[j].play();
+      }
+    } else if (slideshow === 3) {
+      slides = document.getElementsByClassName("mySlides3");
+      if (n > slides.length) { slideIndex3 = 1; }
+      if (n < 1) { slideIndex3 = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        let videos = slides[i].getElementsByTagName("video");
+        for (let j = 0; j < videos.length; j++) {
+          videos[j].pause();
+        }
+      }
+      slides[slideIndex3 - 1].style.display = "block";
+      let visibleVideos = slides[slideIndex3 - 1].getElementsByTagName("video");
+      for (let j = 0; j < visibleVideos.length; j++) {
+        visibleVideos[j].currentTime = 0;
+        visibleVideos[j].play();
       }
     }
-    slides[slideIndex1 - 1].style.display = "block";
-    // Play video in the visible slide
-    let visibleVideos = slides[slideIndex1 - 1].getElementsByTagName("video");
-    for (let j = 0; j < visibleVideos.length; j++) {
-      visibleVideos[j].currentTime = 0;
-      visibleVideos[j].play();
-    }
-  } else if (slideshow === 2) {
-    slides = document.getElementsByClassName("mySlides2");
-    if (n > slides.length) { slideIndex2 = 1 }
-    if (n < 1) { slideIndex2 = slides.length }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      // Pause videos in non-visible slides
-      let videos = slides[i].getElementsByTagName("video");
-      for (let j = 0; j < videos.length; j++) {
-        videos[j].pause();
-      }
-    }
-    slides[slideIndex2 - 1].style.display = "block";
-    // Play video in the visible slide
-    let visibleVideos = slides[slideIndex2 - 1].getElementsByTagName("video");
-    for (let j = 0; j < visibleVideos.length; j++) {
-      visibleVideos[j].currentTime = 0;
-      visibleVideos[j].play();
-    }
   }
-}
-
-// Automatic slide change for both slideshows
-function autoSlide() {
-  setInterval(function() {
-    plusSlides(1, 1);
-    plusSlides(1, 2);
-  }, 13700); // Change slides every 14 seconds
-}
-
-// Start automatic slideshow
-autoSlide();
-
-</script>
+  
+  // Automatic slide change for all slideshows
+  function autoSlide() {
+    setInterval(function() {
+      plusSlides(1, 1);
+      plusSlides(1, 2);
+      plusSlides(1, 3);
+    }, 13700); // Change slides every 14 seconds
+  }
+  
+  // Start automatic slideshow
+  autoSlide();
+  
+  
+  </script>
