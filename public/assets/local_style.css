@@ -371,60 +371,6 @@ h2 {
 		animation: textclip 6.8s linear infinite;
 }
 
-.message-button{
-  padding: 27px;
-  width: 600px;
-  height: 143px;
-  z-index: 10; 
-  position: fixed;
-  bottom: 68px;
-  right: -460px;
-  background-color: rgba(68, 0, 145, 0.657);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: rgba(255, 255, 255, 0.8);
-  border-radius: 100px;
-  box-shadow: 3px 3px 16px rgba(19, 19, 19, 0.823);
-  transition: 0.6s;
-  border-width: 2px;
-  border-style: outset;
-  border-color: rgba(142, 44, 255, 0.093);
-}
-@keyframes messageanimB {
-  0% {
-    right: -460px;
-  }
-	50% {
-		right: -440px;
-  }
-	100% {
-		right: -460px;
-  }
-}
-.message-button:hover{
-  background-color: rgba(119, 0, 255, 0.657);
-  transition: 0.8s;
-  animation: 1.15s messageanimB 0.2s linear infinite;
-}
-.message-button-active{
-  transition: 0.6s;
-  transform: translate(-355px);
-}
-
-.message-button-active:hover{
-  animation-play-state: paused;
-}
-
-.message-button-dark{
-  background-color: rgba(22, 128, 228, 0.930);
-  border-color: rgba(0, 145, 255, 0.093);
-}
-.message-button-dark:hover{
-  background-color: rgba(22, 128, 228, 0.930);
-}
-
-
-
 .font-form-dark{
   background-color: rgba(21, 21, 21, 0.264);
   border-radius: 4px;
@@ -1377,4 +1323,32 @@ body {
 .blue-tintb {
   filter: brightness(3) sepia(1) saturate(100%) hue-rotate(125deg);
   opacity: 1; /* Optional: Adjust transparency */
+}
+.message-button{
+  width: max-content;
+  height: max-content;
+  z-index: 10; 
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: 0.6s;
+}
+@keyframes messageanimB {
+  0% {
+    right: -460px;
+  }
+	50% {
+		right: -440px;
+  }
+	100% {
+		right: -460px;
+  }
+}
+.message-button:hover{
+  transition: 0.8s;
+  animation: 1.15s messageanimB 0.2s linear infinite;
+}
+.message-button-active{
+  transition: 0.6s;
+  transform: translate(-355px);
 }
