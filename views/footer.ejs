@@ -84,14 +84,16 @@
     </div>
   </div>
 
-      <a href="#">
-      <div  id="msg-btn"class="message-button sm:hidden md:hidden lg:block hidden">
+    <a href="#">
+      <div  id="msg-btn"class="message-button-mob sm:hidden md:hidden lg:block hidden">
+                  <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
               <img class="message-button-img" src="/public/images/banner-mobile-floating.png">
       </div> 
     </a>
 
     <a href="#">
-      <div  id="msg-btn"class="message-button-mob sm:block md:block lg:hidden hidden"> <!--sm:hidden md:hidden lg:block hidden-->
+      <div  id="msg-btn"class="message-button-mob sm:block md:block lg:hidden hidden">
+          <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
               <img class="" src="/public/images/banner-mobile-floating.png">
       </div> 
     </a>

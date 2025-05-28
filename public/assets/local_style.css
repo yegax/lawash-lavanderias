@@ -1331,30 +1331,16 @@ body {
   position: fixed;
   bottom: 10px;
   right: 35px;
-  transition: 0.
-  6s;
+  transition: 0.6s;
+  animation: 1.15s messageanimB 0.2s linear infinite;
 }
 .message-button img {
   transform: scale(1.3);
 }
-@keyframes messageanimB {
-  0% {
-    right: 35px;
-  }
-	50% {
-		right: 20px;
-  }
-	100% {
-		right: 35px;
-  }
-}
-.message-button:hover{
-  transition: 0.8s;
-  animation: 1.15s messageanimB 0.2s linear infinite;
-}
-.message-button-active{
-  transition: 0.6s;
-  transform: translate(-355px);
+.message-button:hover {
+  animation-play-state: paused;
+  right: 35px;
+  transition: right 0.6s ease;
 }
 
 .message-button-mob{
@@ -1364,28 +1350,66 @@ body {
   position: fixed;
   bottom: 45px;
   right: 105px;
-  transition: 0.
-  6s;
+  transition: 0.6s;
+  animation: 1.15s messageanimB 0.2s linear infinite;
 }
-@keyframes messageanimC {
+@keyframes messageanimB {
   0% {
-    right: 105px;
+    right: 115px;
   }
 	50% {
-		right: 80px;
+		right: 90px;
   }
 	100% {
-		right: 105px;
+		right: 115px;
   }
 }
+
 .message-button-mob img {
   transform: scale(1.7);
 }
-.message-button-mob:hover{
-  transition: 0.8s;
-  animation: 1.15s messageanimC 0.2s linear infinite;
+.message-button-mob:hover {
+  animation-play-state: paused;
+  right: 105px;
+  transition: right 0.6s ease;
 }
-.message-button-mob-active{
+
+.message-button {
+  width: max-content;
+  height: max-content;
+  z-index: 10;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   transition: 0.6s;
-  transform: translate(-355px);
+  padding: 10px;
+  background: white; /* optional, depends on your design */
+  border-radius: 12px;
 }
+@keyframes messageanimC {
+  0% {
+    right: 10px;
+  }
+	50% {
+		right: 0px;
+  }
+	100% {
+		right: 10px;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: -45px;
+  right: -85px;
+  background: #ff5f5f;
+  border: none;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 20;
+}
+
