@@ -38,7 +38,6 @@
     <circle cx="100" cy="66" r="4" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
     <circle cx="86" cy="79" r="6" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
 </svg>
-
       
 
     <div>
@@ -447,6 +446,21 @@
             <%- include('footer.ejs') %>
         </div>
     </div>
+
+        <a href="#">
+      <div  id="msg-btn"class="message-button-mob sm:hidden md:hidden lg:block hidden">
+                  <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
+              <img class="message-button-img" src="/public/images/banner-mobile-floating.png">
+      </div> 
+    </a>
+
+    <a href="#">
+      <div  id="msg-btn"class="message-button-mob sm:block md:block lg:hidden hidden">
+          <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
+              <img class="" src="/public/images/banner-mobile-floating.png">
+      </div> 
+    </a>
+    
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
