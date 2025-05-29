@@ -1248,7 +1248,7 @@ body {
 .sidebar {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 40%, rgb(91, 141, 144) 100%);
   padding: 100px;
-  z-index: 30;
+  z-index: 10;
   color: #ffffff;
   width: 500px;
   height: 100vh;
