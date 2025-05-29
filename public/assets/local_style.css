@@ -1330,9 +1330,20 @@ body {
   z-index: 10; 
   position: fixed;
   bottom: 10px;
-  right: 35px;
+  right: 30px;
   transition: 0.6s;
-  animation: 1.15s messageanimB 0.2s linear infinite;
+  animation: 1.15s messageanimc 0.2s linear infinite;
+}
+@keyframes messageanimc {
+  0% {
+    right: 30px;
+  }
+	50% {
+		right: 20px;
+  }
+	100% {
+		right: 30px;
+  }
 }
 .message-button img {
   transform: scale(1.0);
@@ -1349,19 +1360,19 @@ body {
   z-index: 10; 
   position: fixed;
   bottom: 45px;
-  right: 30px;
+  right: 115px;
   transition: 0.6s;
   animation: 1.15s messageanimB 0.2s linear infinite;
 }
 @keyframes messageanimB {
   0% {
-    right: 30px;
+    right: 115px;
   }
 	50% {
-		right: 20px;
+		right: 90px;
   }
 	100% {
-		right: 30px;
+		right: 115px;
   }
 }
 
@@ -1374,17 +1385,6 @@ body {
   transition: right 0.6s ease;
 }
 
-@keyframes messageanimC {
-  0% {
-    right: 10px;
-  }
-	50% {
-		right: 0px;
-  }
-	100% {
-		right: 10px;
-  }
-}
 .close-btn-mob {
   position: absolute;
   top: -45px;
