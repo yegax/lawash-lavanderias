@@ -131,5 +131,11 @@ router.get('/privacidad', async (req, res) => {
   res.render("privacidad.ejs")
 })
 
+  // Aviso Privacidad Page
+router.get('/promos', async (req, res) => {
+  res.render("promos.ejs")
+})
+
+
 
 module.exports = router

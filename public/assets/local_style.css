@@ -984,6 +984,10 @@ body {
   font-weight: 900;
 }
 
+.promo-bg{
+    background: linear-gradient(to bottom, #e4e5f1 20%, rgb(114, 179, 184) 30%, rgb(114, 179, 184) 70%, #e4e5f1 80%);
+}
+
 .glass-nav-mobile{
   background: linear-gradient(to bottom, rgb(240, 242, 255) 0%, rgb(228, 229, 241) 70%, rgb(210, 211, 221) 100%);
   padding-bottom: 140px;
