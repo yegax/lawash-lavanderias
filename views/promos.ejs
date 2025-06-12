@@ -42,7 +42,7 @@
       
 
     <div>
-      <div class="relative z-10 promo-bg"> <!-- Ensure content is above the SVG -->
+      <div class="relative z-10"> <!-- Ensure content is above the SVG -->
         <!-- NAVBAR -->
         <%- include('navbar.ejs') %> 
 
@@ -83,7 +83,7 @@
           </video>
       </div>
   </div>
-
+c
   <!-- Next/Prev controls for first slideshow 
   <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
@@ -92,30 +92,18 @@
 </div>
 
 <!-- First Slideshow Container     MOBILE -->
-<div class="relative mt-8 mb-20 hidden sm:block md:block lg:hidden">
+<div class="relative mt-8 hidden sm:block md:block lg:hidden">
   
   <div class="banner">
     <img class="inset-0 w-full h-full opacity-0" src="/public/images/banner-mobile-3.jpg" alt="Top Background Image">
   </div>
 
   <!-- Slideshow Container -->
-  <div class=" slideshow-container z-10 -mb-24 relative">
+  <div class=" slideshow-container -mb-20 z-10 relative">
       <!-- Slide 1 -->
       <div class="mySlides3 fade">
           <div class="banner">
               <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-1.jpg" alt="Top Background Image">
-          </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="mySlides3 fade">
-          <div class="banner">
-              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-2.jpg" alt="Top Background Image">
-          </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="mySlides3 fade">
-          <div class="banner">
-              <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-3.jpg" alt="Top Background Image">
           </div>
       </div>
 
@@ -153,7 +141,7 @@
 </div>
 
   <!-- Second Slideshow Container     MOBILE -->
-  <div class="relative mt-10 hidden sm:block md:block lg:hidden">
+  <div class="relative mt-12 hidden sm:block md:block lg:hidden">
     <div class="banner">
       <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-4.jpg" alt="Top Background Image">
     </div>
