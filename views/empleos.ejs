@@ -37,12 +37,12 @@
       
 
     <div>
-        <div class="relative z-10"> <!-- Ensure content is above the SVG -->
+        <div class="relative z-10 mt-48"> <!-- Ensure content is above the SVG -->
             <!-- NAVBAR -->
             <%- include('navbar.ejs') %> 
 
        <!--HEADER (Path)-->
-       <div class="flex flex-col mt-20  md:flex-row md:justify-between">
+       <div class="flex flex-col md:flex-row md:justify-between">
         <div class="flex ml-3 mt-3 items-center">
 
         </div>
@@ -52,25 +52,19 @@
         <!-- MAIN CONTENT-->
         <div class="md:flex">
 
-            <!--SIDE BAR // ABOUT
-        <div class="md:w-1/4">
-          <div class="hidden md:block glass-bg ">
-              <%- include('sidebar.ejs') %>
-            </div>
-        </div>
-
         <!-- Main content // ABOUT-->
-          <div class="w-full -mb-32 glass-bg ">
-            <div class="p-3 pt-16">
+          <div class="w-full  glass-bg ">
+            <div class="p-3">
 
-              <div class="content flex -mt-1">
-                  <div class="font-semibold text-4xl mt-1 ml-4"> Sucursales: </div>
+              <div class="content flex">
+                  <div class="font-semibold text-4xl ml-4 mt-32"> Portal de Empleos: </div>
               </div>
 
                 
               <div class="mb-2">
                 <p class="text-sms mx-3 mb-8 mt-5">
-                  This component can be utilized to create a navigation menu. Within this component, you'll find a range of different variations and configurations that can be tailored to fit various applications. Whether you need a simple menu or a more complex structure, this component offers the flexibility to meet your specific requirements. 
+                  En esta sección encontrarás las vacantes disponibles para trabajar con nosotros.
+                  Buscamos personas comprometidas, responsables y con ganas de formar parte de un equipo en crecimiento.
                  </p>
                  </div> 
 
@@ -79,15 +73,15 @@
 
                 <div class="mb-2">
                   <p class="text-sms mx-3 mb-8 mt-5">
-                    This component can be utilized to create a comprehensive navigation menu. Within this component, you'll find a range of different variations and configurations that can be tailored to fit various applications. Whether you need a simple menu or a more complex structure, this component offers the flexibility to meet your specific requirements. 
-                   </p>
-                   </div> 
+                    Consulta las oportunidades actuales y postúlate directamente desde esta página. ¡Nos encantaría conocerte!
+                  </p>
+                </div> 
   
                    <div class="flex items-center justify-between border-b select-none mb-2">
                   </div>
            
-              <div class="font-light text-lg pl-4 mt-1 pb-1">Displaying <%= components.length %> results. 
-                <a class="z-0 cursor-pointer text-lg underline float-right" onClick="window.location.reload();"> Reload Results
+              <div class="font-light text-lg pl-4 mt-1 pb-1">Mostrando <%= empleos.length %> resultados. 
+                <a class="z-0 cursor-pointer text-lg underline float-right" onClick="window.location.reload();"> Recargar Resultados
                 <svg xmlns="http://www.w3.org/2000/svg" width="18.5" height="18.5" fill="currentColor" class="mt-1 mr-1 float-left bi bi-arrow-clockwise" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
                   <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>

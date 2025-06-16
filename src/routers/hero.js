@@ -1,11 +1,11 @@
 const express = require('express');
 
-const { db } = require('../models/component');
+const { db } = require('../models/empleos');
 const router = new express.Router()
 
 // models
 const Comment = require(__basedir + '/models/comment')
-const Component = require(__basedir + '/models/component')
+const Empleos = require(__basedir + '/models/empleos')
 
 const DEFAULT_HEROES_PER_PAGE = 10
 const DEFAULT_COMMENTS_PER_PAGE = 3
@@ -46,7 +46,7 @@ router.get('/heroes', async (req, res) => {
     limit: parseInt(req.query.limit, DEFAULT_HEROES_PER_PAGE) || DEFAULT_HEROES_PER_PAGE
   }
 
-Component.find()
+Empleos.find()
   //Sort by "Name" ascending
     .sort({name: 'asc'})
   //Skip count
@@ -57,7 +57,7 @@ Component.find()
         if(err) { res.status(500).json(err); return; };
         //res.json(doc);
         res.render('handlebars/dynamic.hbs', {
-          components: doc
+          empleos: doc
       })
         console.log("Succesfully loaded 'Heroes' sorted and paginated!")
     });
@@ -67,9 +67,9 @@ Component.find()
 router.get('/heroes/:id', async (req, res) => {
   // TODO: fill out the code for the endpoint
 
-  Component.findById(req.params.id, function(err, componentRouter) {
+  Empleos.findById(req.params.id, function(err, empleosRouter) {
     res.render("home.ejs", {
-        components: componentRouter
+        empleos: empleosRouter
     })
 
     // res.render('home.ejs');
@@ -78,19 +78,19 @@ router.get('/heroes/:id', async (req, res) => {
 })
 
   // Route for about page.
-  router.get('/components', async (req, res) => {
+  router.get('/empleos', async (req, res) => {
     var perPage = 11
     var page = req.params.page || 1
   
-    Component
+    Empleos
         .find({})
         .skip((perPage * page) - perPage)
         .limit(perPage)
-        .exec(function(err, componentRouter) {
-          Component.count().exec(function(err, count) {
+        .exec(function(err, empleosRouter) {
+          Empleos.count().exec(function(err, count) {
                 if (err) return next(err)
-                res.render('components.ejs', {
-                  components: componentRouter,
+                res.render('empleos.ejs', {
+                  empleos: empleosRouter,
                     current: page,
                     pages: Math.ceil(count / perPage)
                 })

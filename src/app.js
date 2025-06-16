@@ -36,34 +36,34 @@ const app = express()
 app.use(express.json({ limit: '50mb' }))
 // CORS
 const cors = require('cors')
-const Component = require('./models/component')
+const Empleos = require('./models/empleos')
 app.use(cors())
 
 
 // Routers
-const componentRouter = require(__basedir + '/routers/hero')
-app.use(componentRouter)
+const empleosRouter = require(__basedir + '/routers/hero')
+app.use(empleosRouter)
 
 
 app.get('/', async (req, res) => {
   res.render("homepage.ejs", {
-    components: componentRouter,
+    empleos: empleosRouter,
   })
 })
 
   // Route for specifyng hero list page.
-   app.get('components/:page', async (req, res) => {
+   app.get('empleos/:page', async (req, res) => {
     var perPage = 5
     var page = req.params.page || 1
-    Component
+    Empleos
         .find({})
         .skip((perPage * page) - perPage)
         .limit(perPage)
-        .exec(function(err, componentRouter) {
-          Component.count().exec(function(err, count) {
+        .exec(function(err, empleosRouter) {
+          Empleos.count().exec(function(err, count) {
                 if (err) return next(err)
-                res.render('components.ejs', {
-                    components: componentRouter,
+                res.render('empleos.ejs', {
+                    empleos: empleosRouter,
                     current: page,
                     pages: Math.ceil(count / perPage)
                 })
